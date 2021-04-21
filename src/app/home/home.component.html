@@ -1,0 +1,27 @@
+<div fxLayoutAlign="space-around" class="content-div">
+<mat-card class="main-card">
+<mat-card-header>
+  <mat-card-title>Bienvenido</mat-card-title>
+</mat-card-header>
+<mat-card-content>
+  <p>Este sitio fue creado con la ilusión de repatir amor, de una de las muchas formas que un ovillo de lana puede hacerlo.
+    El proyecto nace como una idea de emprendimiento mezclando las pasiones de una pareja conformada por una mujer adicta a las lanas y su novio al desarrollo web. de atenmano esperamos que disfrutes de nuestros productos y agradecemos de corazón todo tu apoyo.</p>
+  <i>-Sara y Henry</i>
+  <mat-carousel
+  [autoplay]='false'
+  [hideArrows]='false'
+  [hideIndicators]='false'
+  color='primary'
+  maxWidth='99%'
+  [proportion]='30'>
+  <mat-carousel-slide
+    *ngFor="let slide of slides; let i = index"
+    [image]="slide.image"
+  >  
+</mat-carousel-slide>
+</mat-carousel>
+
+  
+</mat-card-content>
+</mat-card>
+</div>
