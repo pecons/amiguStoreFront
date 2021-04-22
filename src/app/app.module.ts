@@ -13,6 +13,9 @@ import { NavbarComponent } from './core/modules/navbar/navbar.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
+import { AuthService } from './core/services/auth.service';
+import { AuthGuard } from './core/services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     NotfoundComponent,
     NavbarComponent,
-    ContactComponent
+    ContactComponent,
+    AdminComponent
   ],
   imports: [
     FormsModule,
@@ -34,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatCarouselModule.forRoot(),
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

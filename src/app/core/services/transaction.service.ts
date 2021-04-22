@@ -13,25 +13,30 @@ export class TransactionService {
         private mocks: MockingService
         ) { }
 
+        sayHi(){
+            return console.log("Hola soy el servicio de Transacciones.");
+            }
+    
+        // -----------------EXAMPLE RETRIEVED FROM DEEPSARS--------------------------------
+        // public read(route: string, data: any, params?: Params): Observable<any> {
+        // 	return this.mocks.has(route).pipe(
+        // 		mergeMap(has => {
+        // 			if (has) {
+        // 				return this.mocks.getJSON(route).pipe(map(result => result.data));
+        // 			}
+        // 			return this.send(route, 'read', data, params);
+        // 		})
+        // 	);
+        // }
+        //---------------------------------------------------------------------------------
+
+
+
+
     //Get {ObtenerLista, ObtenerDato}
-    sayHi(){
-        return console.log("Hola soy el servicio de Transacciones.");
-        }
+    
 
-    // -----------------EXAMPLE RETRIEVED FROM DEEPSARS--------------------------------
-    // public read(route: string, data: any, params?: Params): Observable<any> {
-	// 	return this.mocks.has(route).pipe(
-	// 		mergeMap(has => {
-	// 			if (has) {
-	// 				return this.mocks.getJSON(route).pipe(map(result => result.data));
-	// 			}
-	// 			return this.send(route, 'read', data, params);
-	// 		})
-	// 	);
-	// }
-    //---------------------------------------------------------------------------------
-
-    //Post {Crear Documento}
+    //Post {Crear Documento}    
 
     //Put {Actualizar Documento}
 

@@ -30,7 +30,6 @@ export class ContactComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.post.sayHi();
   }
   
 
@@ -56,6 +55,9 @@ export class ContactComponent implements OnInit {
       this.contactFormGroup.reset()
     },      
     (err)=>{
+      this.snackBar.open("Error al enviar el formulario.","cerrar", {
+        duration: 5000,
+      });
       console.log(err.message);
       this.disableForm=false;
     });
