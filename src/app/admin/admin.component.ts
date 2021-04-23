@@ -8,10 +8,24 @@ import { AuthService } from '../core/services/auth.service';
 })
 export class AdminComponent implements OnInit {
 
+  public step = 0;
+
   constructor(private auth : AuthService) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     
+  }  
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
   }
 
 }

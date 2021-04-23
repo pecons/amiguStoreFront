@@ -34,8 +34,8 @@ export class MockingService {
 	}
 
 	public getJSON(filename: string): Observable<any> {
-		return this.http.get(`mocks/${filename}.json`).pipe(
-			map(data => {
+		return this.http.get(`../../../assets/mocks/${filename}.json`).pipe(
+			map(data => {			
 				return {
 					isValid: true,
 					data

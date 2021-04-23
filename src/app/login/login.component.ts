@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService 
   ) {    
     this.form = this.fb.group({    
-      userName: ['', Validators.required],
+      user: ['', Validators.required],
       password: ['', Validators.required]
     });
     this.formSubmitAttempt = false    
