@@ -1,5 +1,6 @@
 # amiguStore
 
+Proyecto hecho con el fin de practicar angular y empezar un proyecto con lanitas
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server

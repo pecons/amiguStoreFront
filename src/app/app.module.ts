@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { AuthService } from './core/services/auth.service';
 import { AuthGuard } from './core/services/auth.guard';
+import { ItemListComponent } from './item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AuthGuard } from './core/services/auth.guard';
     NotfoundComponent,
     NavbarComponent,
     ContactComponent,
-    AdminComponent
+    AdminComponent,
+    ItemListComponent
   ],
   imports: [
     FormsModule,

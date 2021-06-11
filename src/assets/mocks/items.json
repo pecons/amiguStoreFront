@@ -1,0 +1,54 @@
+[{
+    "_id":"asdasdasd",
+    "name":"superman",
+    "value":"amigurumi superman",
+    "categories":["amigurumis","heroes"],
+    "price":50000,
+    "stock":20,
+    "image":"https://i.pinimg.com/originals/fa/0e/49/fa0e4940efe2d3713aa92ffd6061a628.jpg"
+},
+{
+    "_id":"asdasdasd",
+    "name":"superman",
+    "value":"amigurumi superman",
+    "categories":["amigurumis","heroes"],
+    "price":50000,
+    "stock":20,
+    "image":"https://i.pinimg.com/originals/fa/0e/49/fa0e4940efe2d3713aa92ffd6061a628.jpg"
+},
+{
+    "_id":"asdasdasd",
+    "name":"superman",
+    "value":"amigurumi superman",
+    "categories":["amigurumis","heroes"],
+    "price":50000,
+    "stock":20,
+    "image":"https://i.pinimg.com/originals/fa/0e/49/fa0e4940efe2d3713aa92ffd6061a628.jpg"
+},
+{
+    "_id":"asdasdasd",
+    "name":"superman",
+    "value":"amigurumi superman",
+    "categories":["amigurumis","heroes"],
+    "price":50000,
+    "stock":20,
+    "image":"https://i.pinimg.com/originals/fa/0e/49/fa0e4940efe2d3713aa92ffd6061a628.jpg"
+},
+{
+    "_id":"asdasdasd",
+    "name":"superman",
+    "value":"amigurumi superman",
+    "categories":["amigurumis","heroes"],
+    "price":50000,
+    "stock":20,
+    "image":"https://i.pinimg.com/originals/fa/0e/49/fa0e4940efe2d3713aa92ffd6061a628.jpg"
+},
+{
+    "_id":"asdasdasd",
+    "name":"bikiniXD",
+    "value":"traje de baño amarillo",
+    "categories":["ropa","trajes_de_baño"],
+    "price":80000,
+    "stock":5,
+    "image":"https://images-na.ssl-images-amazon.com/images/I/61X3syugEiL._AC_UY550_.jpg"
+}]

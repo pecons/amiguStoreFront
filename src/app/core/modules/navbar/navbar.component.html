@@ -1,30 +1,33 @@
-<header role="banner">
+<header role="banner" fxFlex >
     <img id="logo-main" src="../../../../assets/imgs/logo.png" width="500" alt="Logo Thing main logo">
   <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" i18n>
           <li><button routerLink='/' mat-button>Inicio</button></li>
-          <li><button mat-button [matMenuTriggerFor]="menu">Categorías <mat-icon>arrow_drop_down</mat-icon></button>
-            <mat-menu #menu="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="cat1">Categoría 1</button>
-            <button mat-menu-item>Categoría 2</button>
-            </mat-menu>
-            
-            <mat-menu #cat1="matMenu">
-                <button mat-menu-item >subcategoría 1</button>
-                <button mat-menu-item >subcategoría 2</button>
-                <button mat-menu-item >subcategoría 3</button>
-                <button mat-menu-item>subcategoría 4</button>
-                <button mat-menu-item>subcategoría 5</button>
-              </mat-menu>
+          <li><button mat-button [matMenuTriggerFor]="main_menu">Categorías <mat-icon>arrow_drop_down</mat-icon></button>
+            <mat-menu #main_menu="matMenu">
+              <ng-container *ngFor="let mainItem of menuList;let i = index">
+                <button mat-menu-item [matMenuTriggerFor]="sub_menu" routerLink='items' [queryParams]="{filterby:mainItem.name}">{{mainItem.name}}</button>
+                <mat-menu #sub_menu="matMenu">
+                   <button *ngFor="let subItem of menuList[i].subcategories" mat-menu-item routerLink='items' [queryParams]="{filterby:subItem}">{{ replaceUnderScores(subItem) }}</button>
+                </mat-menu>
+              </ng-container>
+            </mat-menu>           
+        </li>                     
+        <li><button  routerLink='contact' mat-button>Contáctanos</button></li>
+        <li><button routerLink='shoplist' mat-button style="font-weight: bold;"><mat-icon>local_mall</mat-icon>{{post.getcartItems()}}</button></li>
+        <li *ngIf="authService.isLoggedIn | async"><button  routerLink='admin' mat-button>Admin Panel</button>
+          <button  mat-stroked-button color="warn" (click)="authService.logout()">Cerrar Sesión</button>
         </li>        
-                         
-            <li><button  routerLink='contact' mat-button>Contáctanos</button></li>
-          <li><button routerLink='shoplist' mat-button><mat-icon>local_mall</mat-icon></button></li>
-          <li *ngIf="authService.isLoggedIn | async"><button  routerLink='admin' mat-button>Admin Panel</button>
-          <button  mat-stroked-button color="warn" (click)="authService.logout()">Cerrar Sesión</button></li>
-        </ul>
+        <!-- <li><button mat-button color="warn" [matMenuTriggerFor]="language">Cambiar Idioma<mat-icon>arrow_drop_down</mat-icon></button>
+          <mat-menu #language="matMenu">
+            <button mat-menu-item (click)="changeLanguage('es')">Español</button>
+            <button mat-menu-item (click)="changeLanguage('en')">English</button>
+          </mat-menu> 
+        </li> -->
+        </ul>      
+        
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>

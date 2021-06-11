@@ -1,0 +1,22 @@
+<div fxLayoutAlign="space-evenly" fxLayout="row wrap" fxLayoutGap="30px" class="item-div">
+
+    <mat-card *ngFor="let item of itemList" class="item-card">
+        <img mat-card-image class="item-card-image" src="{{item.image}}" alt="{{item.name}}">
+        <mat-card-content>
+            <span>{{item.value}}</span>
+            <br>
+             <span>Existencias : {{item.stock}}</span>
+            <br>
+            <span fxLayout="row" fxLayoutAlign="start"> <p>Precio :</p>  <p class="price">${{item.price}}</p></span>          
+            
+          
+        </mat-card-content>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+          <button mat-stroked-button color="accent" (click)="post.setcartItems(post.getcartItems()+1)">Añadir al Carrito</button>
+          <button mat-stroked-button color="primary" (click)="enviarMensaje(item)">Comprar</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+
+</div>
