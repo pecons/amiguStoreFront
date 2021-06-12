@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-conf proxy.conf.json",
-    "deploy": "ng build --prod --base-href=/amiguStore/",
+    "deploy": "ng build --prod --base-href=/amiguStoreFront/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
