@@ -12,7 +12,7 @@ export class MockingService {
 	private obs: Observable<any>;
 
 	constructor(private http: HttpClient) {
-		this.obs = this.http.get(`../../../assets/mocks/register.json`);
+		this.obs = this.http.get(`assets/mocks/register.json`);
 		this.obs.subscribe(
 			(data: Array<string>) => {
 				data.forEach(mockName => {
@@ -34,7 +34,7 @@ export class MockingService {
 	}
 
 	public getJSON(filename: string): Observable<any> {
-		return this.http.get(`../../../assets/mocks/${filename}.json`).pipe(
+		return this.http.get(`assets/mocks/${filename}.json`).pipe(
 			map(data => {			
 				return {
 					isValid: true,
